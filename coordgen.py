@@ -5,7 +5,7 @@ import random
 ################################################################################
 
 # PARAMETERS
-colors = ("red", "green", "blue", "yellow")
+colors = ("#FE0000", "#00FF01", "#0057FF", "#FBB03B")
 
 # IMAGE LEVEL
 image_width = 1280
