@@ -10,8 +10,8 @@ colors = ("red", "green", "blue", "yellow")
 # IMAGE LEVEL
 image_width = 1280
 image_height = 1024
-divisions_h = 3
-divisions_v = 5
+divisions_h = 4
+divisions_v = 4
 
 margin_top = 25
 margin_bot = 25
@@ -23,8 +23,8 @@ sector_width = int(image_width / divisions_h)
 sector_height = int(image_height / divisions_v)
 
 # OBJECT LEVEL
-obj_width = 300
-obj_height = 25
+obj_width = 74
+obj_height = 74
 
 
 

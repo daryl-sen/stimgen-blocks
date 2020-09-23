@@ -218,13 +218,20 @@ def check_stim(mode):
     #     '1,5', '2,5', '3,5'
     #     ]
 
+    # sector_list = [
+    #     '1,1', '3,1',
+    #     '1,2', '3,2',
+    #     '1,3', '3,3',
+    #     '1,4', '3,4',
+    #     '1,5', '3,5'
+    #     ]
+
     sector_list = [
-        '1,1', '3,1',
+        '2,1', '4,1',
         '1,2', '3,2',
-        '1,3', '3,3',
+        '2,3', '4,3',
         '1,4', '3,4',
-        '1,5', '3,5'
-        ]
+    ]
     change_location = sector_list[random.randint(1,len(sector_list)-1)]
     list_pack = {item:generate_obj_properties(item) for item in sector_list}
     mode = mode
