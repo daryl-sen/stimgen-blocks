@@ -28,7 +28,7 @@ c2.fillStyle = "black";
 c2.fillRect(0,0,canvas2.width,canvas2.height);
 
 // show grid
-createGrid(canvas1.width/4,canvas1.width/4,canvas1.width,canvas1.height/4,canvas1.height/4,canvas1.height,"gray");
+// createGrid(canvas1.width/4,canvas1.width/4,canvas1.width,canvas1.height/4,canvas1.height/4,canvas1.height,"gray");
 
 // show fixation cross
 var hfc_width = 100;

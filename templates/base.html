@@ -1,4 +1,5 @@
 
+{% set version_num = 3.2.2 %}
 <!DOCTYPE html>
 
 <html>
@@ -107,8 +108,6 @@
       <div id="menuHolder">
           <menu id="menu" style="display: none">
               <div id="menuMain">
-                <a href="{{url_for('index')}}" class="menuItem">Homepage</a>
-                <a href="{{url_for('template')}}" class="menuItem">Template</a>
                 <a href="{{url_for('todo_list')}}" class="menuItem">Todo List</a>
                 <a href="/checkStim/flip" class="menuItem">Flip</a>
                 <a href="/checkStim/change" class="menuItem">Change</a>
