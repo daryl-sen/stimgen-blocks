@@ -11,7 +11,7 @@ colors = ("#FE0000", "#00FF01", "#0057FF", "#FBB03B")
 image_width = 1280
 image_height = 1024
 divisions_h = 4
-divisions_v = 4
+divisions_v = 3
 
 margin_top = 25
 margin_bot = 25
