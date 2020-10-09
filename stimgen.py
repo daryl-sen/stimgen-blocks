@@ -210,28 +210,13 @@ def stimgen_parameters():
 
 @app.route('/checkStim/<mode>')
 def check_stim(mode):
-    # sector_list = [
-    #     '1,1', '2,1', '3,1',
-    #     '1,2', '2,2', '3,2',
-    #     '1,3', '2,3', '3,3',
-    #     '1,4', '2,4', '3,4',
-    #     '1,5', '2,5', '3,5'
-    #     ]
-
-    # sector_list = [
-    #     '1,1', '3,1',
-    #     '1,2', '3,2',
-    #     '1,3', '3,3',
-    #     '1,4', '3,4',
-    #     '1,5', '3,5'
-    #     ]
-
     sector_list = [
         '1,1', '3,1',
         '2,2', '4,2',
         '1,3', '3,3',
     ]
     change_location = sector_list[random.randint(0,len(sector_list)-1)]
+    print(change_location)
     list_pack = {item:generate_obj_properties(item) for item in sector_list}
     mode = mode
     return render_template('pages/canvas.html', sel = list_pack, change_location = change_location, mode=mode)
