@@ -105,6 +105,12 @@ def generate_obj_properties(sector_name):
     # pick 2 colors
     color_indices = random.sample(range(0,4),2)
 
+    # for change condition, in case the colors end up the same
+    alt_indices = random.sample(range(0,4),2)
+    while (alt_indices == color_indices) or (alt_indices[0] in color_indices) or (alt_indices[1] in color_indices):
+        print(f'Regenerating..({alt_indices}) not acceptable')
+        alt_indices = random.sample(range(0,4),2)
+
     # return properties for 2 subobjects
     return {
         # stimulus A
@@ -124,6 +130,6 @@ def generate_obj_properties(sector_name):
         "obj2_color_B": colors[color_indices[0]],
 
         # stimulus C for changed color
-        "obj1_color_C": colors[random.randint(0,3)],
-        "obj2_color_C": colors[random.randint(0,3)],
+        "obj1_color_C": colors[alt_indices[0]],
+        "obj2_color_C": colors[alt_indices[1]],
         }

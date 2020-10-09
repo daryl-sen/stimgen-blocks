@@ -231,7 +231,7 @@ def check_stim(mode):
         '2,2', '4,2',
         '1,3', '3,3',
     ]
-    change_location = sector_list[random.randint(1,len(sector_list)-1)]
+    change_location = sector_list[random.randint(0,len(sector_list)-1)]
     list_pack = {item:generate_obj_properties(item) for item in sector_list}
     mode = mode
     return render_template('pages/canvas.html', sel = list_pack, change_location = change_location, mode=mode)
