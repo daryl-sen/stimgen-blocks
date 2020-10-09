@@ -110,7 +110,8 @@ def generate_obj_properties(sector_name):
     while (alt_indices == color_indices) or (alt_indices[0] in color_indices) or (alt_indices[1] in color_indices):
         print(f'Regenerating..({alt_indices}) not acceptable')
         alt_indices = random.sample(range(0,4),2)
-
+    print(color_indices)
+    print(alt_indices)
     # return properties for 2 subobjects
     return {
         # stimulus A
