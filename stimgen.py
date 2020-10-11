@@ -211,9 +211,9 @@ def stimgen_parameters():
 @app.route('/checkStim/<mode>')
 def check_stim(mode):
     sector_list = [
-        '1,1', '3,1',
-        '2,2', '4,2',
-        '1,3', '3,3',
+        f'{random.randint(1,2)},1', f'{random.randint(3,4)},1',
+        f'{random.randint(1,2)},2', f'{random.randint(3,4)},2',
+        f'{random.randint(1,2)},3', f'{random.randint(3,4)},3',
     ]
     change_location = sector_list[random.randint(0,len(sector_list)-1)]
     print(change_location)
