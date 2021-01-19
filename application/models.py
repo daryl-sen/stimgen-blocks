@@ -10,10 +10,6 @@ def load_user(user_id):
 
 
 
-
-
-
-
 class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(100), nullable = False)
@@ -47,7 +43,7 @@ class Licenses(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     code = db.Column(db.String(20), nullable = False, unique = True)
     status = db.Column(db.String(7), nullable = False) # CLAIMED OR VALID
-    user = db.relationship('Users', backref = db.backref('licenseCode'), uselist = False, nullable = True)
+    user = db.relationship('Users', backref = db.backref('licenseCode'), uselist = False)
     creation_date = db.Column(db.DateTime, nullable = False)
     claimDate = db.Column(db.DateTime, nullable = True)
 
@@ -55,10 +51,8 @@ class Licenses(db.Model):
         self.code = code
         self.creationDate = dt.datetime.now()
     
-    def generateLicenseCode():
-        newLicense = su.ShortUUID().random(9)
-        if Licenses.query.filter_by(code = newLicense).first() is not None:
-            newLicense = generateLicenseCode()
+    def generateLicenseCode(self, length):
+        newLicense = su.ShortUUID().random(length)
         return newLicense
 
 
