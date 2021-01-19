@@ -6,10 +6,10 @@ core = Blueprint('core', __name__, template_folder = 'templates/core')
 def index():
     return render_template('index.html')
 
-@core.route('/template')
-def template():
+@core.route('/create', methods = ['GET', 'POST'])
+def create():
     return render_template('template.html')
 
-@core.route('/customize')
+@core.route('/login')
 def customize():
     return render_template('customize.html')
