@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unilay 6 - {% block page_title %}Universal Layout Library{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/unilay6.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/fav.ico') }}">
+  {% block head_addons %}{% endblock %}
+</head>
+<body>
+  <nav>
+    <div id="logo-with-text">UNILAY 6</div>
+    <div id="nav-menu">
+      <ul id="nav-links">
+        <li><a href="">Documentation</a></li>
+        <li><a href="">Contact</a></li>
+        <li id="close-button">Close</li>
+      </ul>
+      <button id="mobile-nav-button" class="hidden">☰ MENU</button>
+    </div>
+  </nav>
+  <div id="shades" class="hidden"></div>
+  {% block page_content %}
+  <main class="confined">
+    <section id="welcome" class="spacer-medium">
+      <h1>Universal Layout Design</h1>
+      <p>
+        Unilay is a micro CSS library that is written for those who are new to using HTML and CSS. It is extremely easy to use and understand, and even beginners would have no trouble modifying it to their own needs.
+      </p>
+      <p>
+        If you're a backend engineer who's looking to launch your web app without dwelving too deep into HTML, CSS, and Bootstrap, Unilay might a good option for you!
+      </p>
+    </section>
+    <section id="features" class="spacer-medium">
+      <h2>Features</h2>
+      <div class="side-by-side">
+        <div class="bg-white shadowed padded">
+          <h3>
+            Easy to Implement
+          </h3>
+          <p>
+            Unilay uses simple syntax and organization, and comes pre-configured for flask and django applications.
+          </p>
+        </div>
+        <div class="bg-white shadowed padded">
+          <h3>
+            Responsive Design
+          </h3>
+          <p>
+            No need to bother with a separate mobile site, Unilay is built to be responsive and helps your website look good on any platform!
+          </p>
+        </div>
+        <div class="bg-white shadowed padded">
+          <h3>
+            Completely Free
+          </h3>
+          <p>
+            Unilay is free for anyone to use for any purpose. There are no licensing fees or anything like that, but please credit me somewhere in your project.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="spacer-medium">
+      <h2>Help and Contact</h2>
+      <p>
+        If you need help setting up your Unilay project, documentation is on the way! In the meantime, please contact me at sensworks.ca@gmail.com.
+      </p>
+    </section>
+    <!-- <section>
+      <h2>Documentation (more to come)</h2>
+      <div class="shadowed bg-white padded spaced">
+        <p>Here we can find examples of various styles that are available in Unilay 6. For example, this is a paragraph enclosed in a <code>p</code> tag, and you can see some <b>bold</b>, <i>italics</i>, <u>underlined</u>, and <a href="#">linked</a> text.</p>
+      </div>
+      <div class="shadowed bg-white padded spaced">
+        <h2>Headings</h2>
+        <p><code>h1</code> to <code>h5</code> tags.</p>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+      </div>
+    </section> -->
+  </main>
+  {% endblock %}
+  <footer>
+    <div>&copy; Sen Tang, 2021</div>
+    <div>V6.0.0</div>
+  </footer>
+  <script src="{{ url_for('static', filename='js/uiToggles.js') }}"></script>
+</body>
+</html>
